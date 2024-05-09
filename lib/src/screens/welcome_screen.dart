@@ -18,23 +18,27 @@ class WelcomeScreen extends StatelessWidget {
               fit: BoxFit.contain,
             ),
             Container(
-                color: Colors.blue,
+              
                 height: MediaQuery.of(context).size.height,
                 margin: EdgeInsets.symmetric(horizontal: 24),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text(
-                      'Fall in Love with Coffe in Blissful Delight!',
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [Text(
+                      'Fall in Love with \n Coffe in Blissful \nDelight!',
                       textDirection: TextDirection.ltr,
-                      style:
-                          TextStyle(fontFamily: 'Sora Semi Bold', fontSize: 32),
+                      style: TextStyle(
+                          fontFamily: 'Sora Semi Bold',
+                          fontSize: 32,),
+                    ),],
                     ),
                     SizedBox(
                       height: 8,
                     ),
                     Text(
-                      'welcome to our coxy coffee corner, wherer every cup is a delighful for you',
+                      'welcome to our coxy coffee corner, wherer \nevery cup is a delighful for you',
                       textDirection: TextDirection.ltr,
                       style: TextStyle(
                           fontFamily: 'Sora',
