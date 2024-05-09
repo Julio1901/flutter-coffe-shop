@@ -2,7 +2,7 @@ import 'package:coffe_shop/src/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const WelcomeScreen());
+  runApp(MaterialApp( home: WelcomeScreen(),));
 }
 
 
