@@ -7,9 +7,7 @@ import 'package:provider/provider.dart';
 class WelcomeScreen extends StatelessWidget {
   WelcomeScreen({super.key});
 
-  // MainViewModel mainViewModel = MainViewModel();
   final TextEditingController userNameController = TextEditingController();
-
 
   @override
   Widget build(BuildContext context) {

@@ -1,3 +1,4 @@
+import 'package:coffe_shop/src/screens/home_screen.dart';
 import 'package:coffe_shop/src/screens/welcome_screen.dart';
 import 'package:coffe_shop/src/screens/welcome_splash_screen.dart';
 import 'package:coffe_shop/src/viewModels/main_view_model.dart';
@@ -7,7 +8,6 @@ import 'package:provider/provider.dart';
 void main() {
   runApp(MyAppRoot());
 }
-
 
 class MyAppRoot extends StatelessWidget {
   const MyAppRoot({super.key});
@@ -20,6 +20,7 @@ class MyAppRoot extends StatelessWidget {
       routes: {
         'welcomeScreen' :(context) => WelcomeScreen(),
         'welcomeSplashScreen':(context) => WelcomeSplashScreen(),
+        'homeScreen':(context) => HomeScreen(),
       },
     ),
     );
