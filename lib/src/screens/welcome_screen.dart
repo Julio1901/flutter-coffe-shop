@@ -1,15 +1,23 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:coffe_shop/src/viewModels/main_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({super.key});
+  WelcomeScreen({super.key});
+
+  // MainViewModel mainViewModel = MainViewModel();
+  final TextEditingController userNameController = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
     return Material(
         color: Colors.black,
-        child: Column(
+        child: Consumer<MainViewModel>(
+          builder: (context, mainViewModel, _) => 
+          Column(
           children: [
             Stack(
               alignment: Alignment.topCenter,
@@ -48,6 +56,7 @@ class WelcomeScreen extends StatelessWidget {
                                 ),
                               ),
                               TextField(
+                                controller: userNameController,
                                 decoration: InputDecoration(
                                   enabledBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(
@@ -101,7 +110,8 @@ class WelcomeScreen extends StatelessWidget {
                           textDirection: TextDirection.ltr,
                           child: ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, 'welcomeSplashScreen');
+                             mainViewModel.setUserName(userNameController.text);
+                             Navigator.pushNamed(context, 'welcomeSplashScreen');
                             },
                             child: Text(
                               'Get Started',
@@ -123,6 +133,9 @@ class WelcomeScreen extends StatelessWidget {
               ],
             )
           ],
-        ));
+        )
+        )
+        
+        );
   }
 }
