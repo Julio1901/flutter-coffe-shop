@@ -100,7 +100,9 @@ class WelcomeScreen extends StatelessWidget {
                         Directionality(
                           textDirection: TextDirection.ltr,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'welcomeSplashScreen');
+                            },
                             child: Text(
                               'Get Started',
                               style: TextStyle(
