@@ -16,6 +16,7 @@ class MyAppRoot extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => MainViewModel(),
       child:  MaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: 'welcomeScreen', 
       routes: {
         'welcomeScreen' :(context) => WelcomeScreen(),
